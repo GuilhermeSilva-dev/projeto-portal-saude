@@ -25,7 +25,7 @@ Siga exatamente o roteiro de comandos abaixo no terminal para rodar o projeto lo
 Abra o terminal do seu sistema operacional (Prompt de Comando, PowerShell ou Git Bash) na pasta onde deseja salvar o projeto e digite:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+https://github.com/GuilhermeSilva-dev/projeto-portal-saude
 ```
 
 ### 📁 2. Navegar para a Pasta Raiz do Projeto
