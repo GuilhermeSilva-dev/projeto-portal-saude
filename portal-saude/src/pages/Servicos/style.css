@@ -1,0 +1,43 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  min-height: 70vh;
+}
+
+h1 {
+  color: #1d3557;
+  margin-bottom: 30px;
+}
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card-servico {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-left: 5px solid #00b4d8;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-servico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.card-servico h3 {
+  color: #1d3557;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.card-servico p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.5;
+}
