@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Servicos from './pages/Servicos';
 import CorpoClinico from './pages/CorpoClinico';
-import Blog from './pages/Blog/Novidades';
+import Blog from './pages/Blog';
 import Contato from './pages/Contato';
 
 export default function App() {
