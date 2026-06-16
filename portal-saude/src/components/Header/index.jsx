@@ -9,7 +9,7 @@ export default function Header({ theme, toggleTheme }) {
     <header className="site-header">
       <div className="header-container">
         <Link to="/" className="logo">
-          🏥 Policlínica Regional Cuidar
+          🏥 Policlínica Humaniza
         </Link>
         
         <nav className="nav-menu">

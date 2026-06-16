@@ -1,3 +1,4 @@
+/* 🌍 ESTILOS GERAIS DA PÁGINA */
 .container {
   max-width: 1200px;
   margin: 40px auto;
@@ -21,7 +22,7 @@ h1 {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #e0e0e0;
 }
 
@@ -37,7 +38,7 @@ h1 {
   color: #888;
 }
 
-/* Estilos da página de contato */
+/* 📞 ESTILOS DA PÁGINA DE CONTATO */
 .contato-wrapper {
   display: flex;
   gap: 40px;
@@ -84,24 +85,102 @@ h1 {
   font-weight: bold;
 }
 
-/* Título e Texto para alinhar com o seu design */
-.hero-title {
-  font-size: 2.2rem;
+/* 🏢 IDENTIDADE DO NOME DA CLÍNICA */
+.clinic-welcome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.clinic-welcome h2 {
+  font-size: 1.6rem;
   color: var(--text);
-  margin-bottom: 15px;
-  border-bottom: 3px solid var(--primary);
-  padding-bottom: 8px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sus-badge {
+  background-color: #005bb2;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+/* 🎠 ESTRUTURA CONTAINER DO CARROSSEL */
+.hero-carousel {
+  position: relative;
+  border-radius: 16px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  background-color: #0f172a; 
+}
+
+/* 🎞️ DEFINIÇÕES DA LÂMINA / SLIDE (CORREÇÃO DE SOBREPOSIÇÃO) */
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+.carousel-slide.active {
+  display: flex;
+  align-items: center;
+}
+
+.slide-content {
+  max-width: 620px;
+  text-align: left;
+  z-index: 2;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 🏷️ ELEMENTOS DE TEXTO INTERNOS DO CARROSSEL */
+.slide-tag {
   display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #ffffff !important;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  border-bottom: none; /* Removido borda amadora antiga */
+  padding-bottom: 0;
 }
 
 .hero-text {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  max-width: 800px;
+  color: #e2e8f0 !important;
+  font-size: 1.15rem;
+  margin-bottom: 35px;
+  line-height: 1.6;
 }
 
-/* 🔥 BOTÃO PREMIUM TOTALMENTE ESTILIZADO */
+/* 🔥 BOTÃO PREMIUM INTERNO */
 .btn-agendar {
   background-color: var(--primary);
   color: #ffffff;
@@ -114,88 +193,77 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2), 0 2px 4px -1px rgba(2, 132, 199, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
   transition: var(--transition);
 }
 
-/* Efeito ao passar o mouse (Hover) */
 .btn-agendar:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.3);
 }
 
-/* Efeito ao clicar (Active) */
 .btn-agendar:active {
   transform: translateY(0);
-  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
 }
 
-/* 🎠 CONFIGURAÇÕES DO CARROSSEL DE UPGRADE */
-.hero-carousel {
-  position: relative;
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(15, 23, 42, 0.02) 100%);
-  border-radius: 16px;
-  padding: 60px 40px;
-  min-height: 400px;
+/* 🏹 SETAS DE NAVEGAÇÃO INTERNAS */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(15, 23, 42, 0.5);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 1.3rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  margin-bottom: 30px;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-[data-theme="dark"] .hero-carousel {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(30, 41, 59, 0.5) 100%);
-}
-
-.carousel-slide {
-  display: none;
-  width: 100%;
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-.carousel-slide.active {
-  display: block;
-}
-
-.slide-tag {
-  display: inline-block;
+.carousel-arrow:hover {
   background-color: var(--primary);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  border-color: var(--primary);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5);
 }
 
+.carousel-arrow.left { left: 25px; }
+.carousel-arrow.right { right: 25px; }
+
+/* 🔵 PONTOS DE NAVEGAÇÃO INFERIORES */
 .carousel-dots {
   position: absolute;
-  bottom: 20px;
-  left: 40px;
+  bottom: 25px;
+  left: 60px;
   display: flex;
   gap: 8px;
+  z-index: 5;
 }
 
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--border);
+  background-color: rgba(255, 255, 255, 0.35);
   cursor: pointer;
   transition: var(--transition);
 }
 
 .dot.active {
   background-color: var(--primary);
-  width: 25px; /* Efeito esticado moderno */
+  width: 28px;
   border-radius: 5px;
 }
 
-/* 💳 BARRA DE INFORMAÇÕES RÁPIDAS */
+/* 💳 BARRA DE INFORMAÇÕES RÁPIDAS (ABAIXO DO CARROSSEL) */
 .quick-info-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -213,4 +281,22 @@ h1 {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/* 📱 ADAPTAÇÃO SMARTPHONE/TABLET */
+@media (max-width: 768px) {
+  .carousel-slide {
+    padding: 60px 30px;
+    min-height: 400px;
+  }
+  .hero-carousel { min-height: 400px; }
+  .hero-title { font-size: 1.8rem; }
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  .carousel-arrow.left { left: 10px; }
+  .carousel-arrow.right { right: 10px; }
+  .carousel-dots { left: 30px; }
 }
