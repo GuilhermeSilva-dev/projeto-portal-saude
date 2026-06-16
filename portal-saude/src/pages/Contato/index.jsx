@@ -73,6 +73,26 @@ export default function Contato() {
           </button>
         </form>
       </div>
+      <div className="faq-section">
+  <h2 className="faq-title">Dúvidas Frequentes</h2>
+  
+  <div className="faq-grid">
+    <div className="faq-item">
+      <h4>📌 Quais documentos preciso levar para a consulta no SUS?</h4>
+      <p>É obrigatório apresentar o Documento de Identidade oficial com foto (RG ou CNH), o Cartão Nacional de Saúde (Cartão SUS) atualizado e o comprovante de residência.</p>
+    </div>
+
+    <div className="faq-item">
+      <h4>⏱️ Quanto tempo antes devo chegar para meu exame?</h4>
+      <p>Recomendamos a chegada com pelo menos 20 minutos de antecedência do horário agendado para a conferência e triagem de documentos na recepção central.</p>
+    </div>
+
+    <div className="faq-item">
+      <h4>📱 Consigo ver o resultado dos exames pela internet?</h4>
+      <p>Sim! Todos os resultados de exames laboratoriais realizados em nossa unidade ficam disponíveis no aplicativo oficial do ConecteSUS ou retirados nos nossos totens.</p>
+    </div>
+  </div>
+</div>
     </div>
   );
 }

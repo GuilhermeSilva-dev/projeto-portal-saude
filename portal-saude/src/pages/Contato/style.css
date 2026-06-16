@@ -199,3 +199,48 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
 }
+
+/* ❓ SEÇÃO DE FAQ ESTILO CLIVALE */
+.faq-section {
+  margin-top: 50px;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.faq-title {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: var(--primary);
+  background: linear-gradient(to right, var(--surface), var(--background));
+}
+
+.faq-item h4 {
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
