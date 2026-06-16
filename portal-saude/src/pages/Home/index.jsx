@@ -56,7 +56,6 @@ const slides = [
         <h2>Policlínica Pública Humaniza</h2>
       </div>
 
-      {/*  Carousel de Destaques */}
       <div className="hero-carousel">
         
         {/* Seta de navegação: Anterior */}
