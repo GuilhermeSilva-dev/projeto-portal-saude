@@ -1,43 +1,41 @@
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  min-height: 70vh;
-}
-
-h1 {
-  color: #1d3557;
-  margin-bottom: 30px;
+.page-title {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .grid-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 20px;
 }
 
-.card-servico {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-left: 5px solid #00b4d8;
-  transition: transform 0.2s, box-shadow 0.2s;
+.service-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
 }
 
-.card-servico:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
 }
 
-.card-servico h3 {
-  color: #1d3557;
-  margin-bottom: 12px;
-  font-size: 20px;
+.service-card h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
-.card-servico p {
-  color: #666;
-  font-size: 15px;
+.service-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
   line-height: 1.5;
 }

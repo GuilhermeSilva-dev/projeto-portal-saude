@@ -1,37 +1,78 @@
-import { useState } from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import './style.css';
+import { useState } from "react";
+import "./style.css";
 
 export default function Contato() {
+  const [form, setForm] = useState({ nome: "", email: "", mensagem: "" });
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEnviado(true);
+    if (form.nome && form.email && form.mensagem) {
+      setEnviado(true);
+      
+      // Simulação de resposta de envio
+      setTimeout(() => {
+        setEnviado(false);
+        setForm({ nome: "", email: "", mensagem: "" });
+      }, 4000);
+    }
   };
 
   return (
-    <>
-      <Header />
-      <main className="container">
-        <h1>Fale Conosco</h1>
-        <div className="contato-wrapper">
-          <div className="info-contato">
-            <p>📞 <strong>Telefone:</strong> (11) 4002-8922</p>
-            <p>📍 <strong>Endereço:</strong> Av. da Saúde, 123 - Centro</p>
-          </div>
-          
-          <form onSubmit={handleSubmit} className="form-contato">
-            <input type="text" placeholder="Seu Nome" required />
-            <input type="email" placeholder="Seu E-mail" required />
-            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-            {enviado && <p className="sucesso">Mensagem enviada com sucesso!</p>}
-          </form>
+    <div className="contato-container fade-in">
+      <h1 className="page-title">Fale Conosco</h1>
+      <p className="page-subtitle">Tem alguma dúvida ou precisa de suporte? Entre em contato preenchendo os campos abaixo.</p>
+      
+      {enviado && (
+        <div className="alert-success">
+          🎉 Sua mensagem foi enviada com sucesso! Responderemos em breve.
         </div>
-      </main>
-      <Footer />
-    </>
+      )}
+
+      {/* Caixa do formulário profissional */}
+      <div className="form-card">
+        <form onSubmit={handleSubmit} className="contato-form">
+          <div className="input-group">
+            <label htmlFor="nome">Nome Completo</label>
+            <input 
+              id="nome"
+              type="text" 
+              required 
+              placeholder="Digite seu nome completo"
+              value={form.nome} 
+              onChange={e => setForm({...form, nome: e.target.value})} 
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="email">E-mail Corporativo / Pessoal</label>
+            <input 
+              id="email"
+              type="email" 
+              required 
+              placeholder="exemplo@email.com"
+              value={form.email} 
+              onChange={e => setForm({...form, email: e.target.value})} 
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="mensagem">Mensagem / Observação</label>
+            <textarea 
+              id="mensagem"
+              rows="5" 
+              required 
+              placeholder="Como podemos ajudar você hoje?"
+              value={form.mensagem} 
+              onChange={e => setForm({...form, mensagem: e.target.value})} 
+            />
+          </div>
+
+          <button type="submit" className="btn-submit">
+            <span>📩</span> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }

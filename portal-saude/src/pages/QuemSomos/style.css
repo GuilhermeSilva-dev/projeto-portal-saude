@@ -21,3 +21,72 @@ p {
   max-width: 800px;
   margin-bottom: 20px;
 }
+
+.page-title {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* 📖 SEÇÃO DA HISTÓRIA */
+.history-section {
+  margin-bottom: 45px;
+  max-width: 900px;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.body-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+/* 🗂️ GRID DE MISSÃO, VISÃO E VALORES */
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.mvv-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--primary); /* Destaque na borda superior para diferenciar */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  text-align: center; /* Centraliza o conteúdo institucional */
+}
+
+.mvv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mvv-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.mvv-card h3 {
+  color: var(--secondary);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.mvv-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

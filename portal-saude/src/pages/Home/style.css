@@ -83,3 +83,50 @@ h1 {
   color: #2a9d8f;
   font-weight: bold;
 }
+
+/* Título e Texto para alinhar com o seu design */
+.hero-title {
+  font-size: 2.2rem;
+  color: var(--text);
+  margin-bottom: 15px;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.hero-text {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  max-width: 800px;
+}
+
+/* 🔥 BOTÃO PREMIUM TOTALMENTE ESTILIZADO */
+.btn-agendar {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2), 0 2px 4px -1px rgba(2, 132, 199, 0.1);
+  transition: var(--transition);
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.btn-agendar:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.3);
+}
+
+/* Efeito ao clicar (Active) */
+.btn-agendar:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
+}
